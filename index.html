@@ -18,6 +18,11 @@
   /* Style of stuff */
   /* Style of stuff */
   /* Style of stuff */
+
+  /* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
   
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -68,7 +73,62 @@ body {
   background-color: #ddd;
   color: black; /*Color text hovering, accpets html colors*/
 }
+
+
+  /* COLUMNS */
+  /* COLUMNS */
+
+  /* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Portion of side, compatible with (w.w) */
+  background-color: #f1f1f1;
+  padding: 20px; /* Margin */
+}
+
+/* Main column */
+.main {   
+  flex: 70%; /* Portion of main, compatible with (w.w) */
+  background-color: white;
+  padding: 20px; /* Margin */
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */ /* This is currently not being used */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
   
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
 </style>
   
 </head>
@@ -90,21 +150,63 @@ body {
   <!-- Navigation bar -->
 <div class="navbar">
   <a href="#">About me</a>
-  <a href="#">Artciles</a>
+  <a href="#">Articles</a>
   <a href="#">Other</a>
   <a href="CV RGC.pdf" class="right">CV</a>
 </div>
 
+  <!-- The two columns -->
+<div class="row">
+  
+  <!-- Side -->
+  <div class="side">
+    <h2>About Me</h2>
+    <!--<h5>Photo of me:</h5>-->
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Alfréd Rényi Institute of Mathematics</p>
+    <p>Reáltanoda u. 13-15</p>
+    <p>HU 1053 Budapest, Hungary</p>
+    <p>roberto.gimenez@uv.es</p>
+    <!--ORCID: \href{https://orcid.org/0000-0003-1059-3818}{0000-0003-1059-3818}-->
+    
+    <h3>Positions</h3>
+    <h4>Rényi Postdoc fellow</h4>
+    <h5>Alfréd Rényi Institute of Mathematics</h5>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <p>I obtained my PhD in Universitat de València in 2021, advised by Juan José Nuño-Ballesteros.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+
+    
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
  
-  <p>Currently I am a Rényi Postdoc fellow in the Alfréd Rényi Institute of Mathematics, Budapest (Hungary). My postdoc supervisor is András Némethi.
+  <!-- <p>Currently I am a Rényi Postdoc fellow in the Alfréd Rényi Institute of Mathematics, Budapest (Hungary). My postdoc supervisor is András Némethi.
   I obtained my PhD in the University of Valencia under the uspervision of Juan José Nuño-Ballesteros</p>
   
 <h2>Articles</h2>
   <ul>
   <li>Article 1</li>
   <li>Article 2</li> 
-</ul>
+</ul> -->
 
+
+<!-- This is for the foot of the webpage
+<div class="footer">
+  <h2>Footer</h2>
+</div> -->
   
 
 </body>
