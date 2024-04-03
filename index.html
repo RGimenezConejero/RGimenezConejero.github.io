@@ -14,6 +14,11 @@
 
 
 
+
+
+
+
+  
   
 <style>
   /* Style of stuff */
@@ -53,22 +58,28 @@ body {
   /* NAV BAR */
   
   /* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333; /* Color of the bar (without hovering) */
-}
+  .topnav {
+      /* overflow: hidden; */
+      background-color: #333; /* Color of the bar (without hovering) */
+      position: sticky;
+      top: 0;
+      min-height: 48px;
+    }
 
   /* Style the navigation bar links */
-.navbar a {
-  float: left; /* Position within nav bar*/
-  display: block; /* Style of the full bar */
-  color: white; /*Color text (without hovering, accpets html colors)*/
-  text-align: center;
-  padding: 14px 20px; /* The margins of each element of the nav bar (vertical horizontal) */
-  text-decoration: none;
-}
+  .topnav a {
+      list-style-type: none;
+      float: left; /* Position within nav bar*/
+      display: block;  /* Style of the full bar */
+      color: white; /*Color text (without hovering, accpets html colors)*/
+      text-align: center;
+      padding: 14px 16px; /* The margins of each element of the nav bar (vertical horizontal) */
+      text-decoration: none;
+      font-size: 16px;
+    }
+  
     /* Change color on hover */
-.navbar a:hover, .dropdown:hover .dropbtn{
+.topnav a:hover, .dropdown:hover .dropbtn{
   background-color: #ddd;
   color: black; /*Color text hovering, accpets html colors*/
 }
@@ -76,7 +87,6 @@ body {
   /* The dropdown container */
 .dropdown {
   float: left;
-  overflow: hidden;
 }
   /* Dropdown button */
 .dropdown .dropbtn {
@@ -110,6 +120,7 @@ body {
   /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
+      color: black;
 }
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -119,29 +130,19 @@ body {
   
 
   /* Add an active class to highlight the current page */
-.navbar a.active {
+.active {
   background-color: #04AA6D;
   color: white;
 }
   
   /* Right-aligned link */
-.navbar a.right {
+.topnav a.right {
   float: right;
-  background-color: #E85232; /*Color background*/
-  color: white; /*Color text*/
+  background-color: black; /* Color background */
+  color: white; /* Color text */
 }
 
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position, to stick to the top */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .main + .side {
-  padding-top: 60px;
-}
   
 
 
@@ -203,6 +204,23 @@ body {
   
 </head>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   <!-- BODY STARTS -->
   <!-- BODY STARTS -->
   <!-- BODY STARTS -->
@@ -217,21 +235,42 @@ body {
   <p>Personal webpage of Roberto Giménez Conejero</p>
 </div>
 
+
+
+       <a href="#home" class="active">Home</a>
+       <a href="#news">News</a>
+       <a href="#contact">Contact</a>
+       <div class="dropdown">
+         <button class="dropbtn">Dropdown
+           <i class="fa fa-caret-down"></i>
+         </button>
+         <div class="dropdown-content">
+           <a href="#">Link 1</a>
+           <a href="#">Link 2</a>
+           <a href="#">Link 3</a>
+         </div>
+       </div>
+       <a href="#about">About</a>
+       <a href="CV RGC.pdf" class="right">CV</a>
+     </div>
   <!-- Navigation bar -->
-<div class="navbar">
-  <!--<a href="#">About me</a>-->
+  <div class="topnav" id="myTopnav">
+  <a href="#">About me</a>
   <a href="#">Articles</a>
   <a href="#">Interests</a>
   <a href="#">Outreach</a>
-  <!-- <div class="dropdown">
-    <button class="dropbtn">Hi
-      <i class="fa fa-caret-down"></i> <!-- For the triangle -->
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div> -->
+    
+<div class="dropdown">
+         <button class="dropbtn">Dropdown
+           <i class="fa fa-caret-down"></i> <!-- For the triangle -->
+         </button>
+         <div class="dropdown-content">
+           <a href="#">Link 1</a>
+           <a href="#">Link 2</a>
+           <a href="#">Link 3</a>
+         </div>
+       </div>
+    
   <a href="CV RGC.pdf" class="right">CV</a>
 </div>
 
@@ -284,23 +323,15 @@ body {
 
 
 
-  <script>
-    // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myStick()};
-
-    // Get the navbar
-var navbar = document.getElementById("navbar");
-    // Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myStick() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+  <!--<script>
+   function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
   } else {
-    navbar.classList.remove("sticky");
+    x.className = "topnav";
   }
 }
-</script>
+</script>-->
 </body>
 </html>
