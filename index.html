@@ -9,6 +9,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
   
@@ -64,15 +67,82 @@ body {
   padding: 14px 20px; /* The margins of each element of the nav bar (vertical horizontal) */
   text-decoration: none;
 }
-  /* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-  /* Change color on hover */
-.navbar a:hover {
+    /* Change color on hover */
+.navbar a:hover, .dropdown:hover .dropbtn{
   background-color: #ddd;
   color: black; /*Color text hovering, accpets html colors*/
 }
+
+  /* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+  /* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+  /* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.4); /* Shadow box with options (sidepx verticalpx difuminationpx sizepx (color)) */
+  z-index: 1;
+}
+  /* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black; /* Color text */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+  /* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  
+
+  /* Add an active class to highlight the current page */
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+  
+  /* Right-aligned link */
+.navbar a.right {
+  float: right;
+  background-color: #E85232; /*Color background*/
+  color: white; /*Color text*/
+}
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position, to stick to the top */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .main + .side {
+  padding-top: 60px;
+}
+  
 
 
   /* COLUMNS */
@@ -153,6 +223,15 @@ body {
   <a href="#">Articles</a>
   <a href="#">Interests</a>
   <a href="#">Outreach</a>
+  <!-- <div class="dropdown">
+    <button class="dropbtn">Hi
+      <i class="fa fa-caret-down"></i> <!-- For the triangle -->
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div> -->
   <a href="CV RGC.pdf" class="right">CV</a>
 </div>
 
@@ -202,5 +281,26 @@ body {
 </div> -->
   
 
+
+
+
+  <script>
+    // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myStick()};
+
+    // Get the navbar
+var navbar = document.getElementById("navbar");
+    // Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myStick() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 </html>
