@@ -83,7 +83,7 @@ body {
   color: black; /*Color text hovering, accpets html colors*/
 }
 
-.topnav a.currently { /* DONT CHANGE NAME https://stackoverflow.com/questions/51818419/remove-a-wild-dash-from-active-class-anchor-tag */
+.topnav a.youarehere { /* DONT CHANGE NAME https://stackoverflow.com/questions/51818419/remove-a-wild-dash-from-active-class-anchor-tag */
   background-color: #04AA6D;
   color: white;
   border:none;
