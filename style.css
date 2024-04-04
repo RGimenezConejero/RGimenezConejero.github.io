@@ -227,6 +227,69 @@ body {
 /* **************************** */
 
 
+/* **************************** */
+  /* ACCORDION */
+/* **************************** */
+
+/* Main text */
+.mainBIG {   
+  flex: 100%; 
+  background-color: white;
+  padding: 20px; /* Margin */
+}
+
+  /* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #ddd; /* Color background */
+  color: black; /* Color text */
+  cursor: pointer;
+  padding: 20px; /* Size boxes */
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s; /* Transition between normal and hover */ 
+  border-radius: 8px; /* Round borders */
+  border-left: 4px solid #1a75ff; /* Size Style Color */
+  border-right: 4px solid #1a75ff; /* Size Style Color */
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #cccccc;
+  border-left: 3px solid #1a75ff; /* Size Style Color */
+  border-right: 3px solid #1a75ff; /* Size Style Color */
+}
+
+.accordion:after {
+  content: '\002B'; /* + in unicode */
+  color: DarkSlateGrey; /* Color of text (+ and -) */
+  font-weight: bold; /* Size of text (+ and -) */
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212"; /* - in unicode */
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; /* Effects on transition */
+}
+
+
+
+/* **************************** */
+
+
+
 /* Fake image, just for this example */
 .fakeimg {
   background-color: #aaa;
