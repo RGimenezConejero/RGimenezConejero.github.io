@@ -6,13 +6,21 @@
 <head>
   <!-- Name of page in tab and other options -->
 <title>R Giménez Conejero</title>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<!--<link rel="icon" type="image/gif" href="images/favicon.gif">-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
-  
+<link rel="stylesheet" href="images/font-awesome-4.7.0/font-awesome.min.css">
+ 
+ <!-- To render mathematics -->
+ <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 
 
@@ -52,7 +60,7 @@
   <div class="topnav" id="myTopnav">
   <a href="index.html">About me</a>
   <a href="#" class="youarehere">Articles</a>
-  <a href="#">Problem list</a>
+  <a href="list.html">Problem list</a>
        <div class="dropdown">
          <button class="dropbtn">More
            <i class="fa fa-caret-down"></i> <!-- For the triangle -->
@@ -75,47 +83,128 @@
 
 
 
-<button class="accordion"><strong>A note on complex plane curve singularities up to diffeomorphism and their rigidity</strong></button>
+<button class="accordion"><strong>A note on complex plane curve singularities up to diffeomorphism and their rigidity</strong> </button>
 <div class="panel">
-  <p>Abstract.</p>
+  <p>We prove that, if two germs of plane curves \((C,0)\) and \((C',0)\) with at least one singular branch are equivalent by a (real) smooth diffeomorphism,
+  then \(C\) is complex isomorphic to \(C'\) or to \(\overline{C'}\). A similar result was shown by Ephraim for irreducible hypersurfaces before,
+  but his proof is not constructive. Indeed, we show that the complex isomorphism is given by the Taylor series of the diffeomorphism.
+  We also prove an analogous result for the case of non-irreducible hypersurfaces containing an irreducible component of zero-dimensional isosingular locus.
+  Moreover, we provide a general overview of the different classifications of plane curve singularities.</p>
 </div>
-    <p style="text-align:center;">with A. Fernández-Hernández, <em>Res. Math. Sci.</em>, <b>2024</b></p>
-
+    <p style="text-align:center;">
+	with A. Fernández-Hernández,&#160;&#160;&#160;&#160;    <em>Res. Math. Sci.</em>,&#160;&#160;&#160;&#160; <b>2024</b> &#160;&#160;&#160;&#160;
+	<span style="float:right;">
+        <a class="imageLink" href="https://arxiv.org/abs/2309.12958" aria-hidden="true">
+	<img src="images/arxiv-logo.png" alt="arXiv link" width="40">
+    </a> &#160;&#160;&#160;&#160;
+	<a class="imageLink" href="https://link.springer.com/content/pdf/10.1007/s40687-024-00439-w.pdf">
+	<i class="pdflinking fa fa-file-pdf-o" style='font-size:20px;color:red' style="text-align: center;" aria-hidden="true"></i> 
+    </a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </span>
+	</p>
+<!-- https://stackoverflow.com/questions/12438339/how-may-i-align-text-to-the-left-and-text-to-the-right-in-the-same-line -->
 
 
 
     <button class="accordion"><strong>A weak version of the Mond conjecture</strong></button>
 <div class="panel">
-  <p>Abstract.</p>
+  <p>We prove that a map germ \(f:(\mathbb{C}^n,S)\to(\mathbb{C}^{n+1},0)\) with isolated instability is stable if and only if \(\mu_I(f)=0\),
+  where \(\mu_I(f)\) is the image Milnor number defined by Mond. In a previous paper we proved this result with the additional assumption that \(f\)
+  has corank one. The proof here is also valid for corank \(\ge 2\), provided that \((n,n+1)\) are nice dimensions in Mather's sense (so \(\mu_I(f)\)
+  is well defined). Our result can be seen as a weak version of a conjecture by Mond, which says that the \(\mathscr{A}_e\)-codimension of \(f\)
+  is \(\le \mu_I(f)\), with equality if \(f\) is weighted homogeneous. As an application, we deduce that the bifurcation set of a versal unfolding of \(f\)
+  is a hypersurface.</p>
 </div>
-    <p style="text-align:center;">with J.J. Nuño-Ballesteros, <em>Collect. Math.</em>, <b>2023</b></p>
+    <p style="text-align:center;">with J.J. Nuño-Ballesteros,&#160;&#160;&#160;&#160;
+	<em>Collect. Math.</em>,&#160;&#160;&#160;&#160;
+	<b>2023</b>&#160;&#160;&#160;&#160;
+	<span style="float:right;">
+        <a class="imageLink" href="https://arxiv.org/abs/2207.01735" aria-hidden="true">
+	<img src="images/arxiv-logo.png" alt="arXiv link" width="40">
+    </a> &#160;&#160;&#160;&#160;
+	<a class="imageLink" href="https://link.springer.com/content/pdf/10.1007/s13348-023-00411-x.pdf">
+	<i class="pdflinking fa fa-file-pdf-o" style='font-size:20px;color:red' style="text-align: center;" aria-hidden="true"></i> 
+    </a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </span>
+	</p>
 
 
 
 
     <button class="accordion"><strong>Thom condition and monodromy</strong></button>
 <div class="panel">
-  <p>Abstract.</p>
+  <p>We give the definition of the Thom condition and we show that given any germ of 
+complex analytic function \(f\colon(X,x)\to(\mathbb{C},0)\) on a complex 
+analytic space \(X\), there exists a geometric local monodromy without fixed points, provided that 
+\(f\in\mathfrak m_{X,x}^2\), where \(\mathfrak m_{X,x}\) is the maximal ideal of \(\mathcal{O}_{X,x}\). 
+This result generalizes a well-known theorem of the second named author when \(X\) is smooth and
+proves a statement by Tibar in his PhD thesis. It also implies the A'Campo theorem that the Lefschetz number of the monodromy is equal to zero. 
+Moreover, we give an application to the case that \(X\) has maximal rectified homotopical depth at \(x\) 
+and show that a family of such functions with isolated critical points and constant total Milnor number 
+has no coalescing of singularities.</p>
 </div>
-    <p style="text-align:center;">with Lê Dũng Tráng and J.J. Nuño-Ballesteros, <em>Rev. R. Acad. Cienc. Exactas Fís. Nat. Ser. A Mat. RACSAM</em>, <b>2022</b></p>
-    
+    <p style="text-align:center;">with Lê Dũng Tráng and J.J. Nuño-Ballesteros,&#160;&#160;&#160;&#160;
+	<em>Rev. R. Acad. Cienc. Exactas Fís. Nat. Ser. A Mat. RACSAM</em>,&#160;&#160;&#160;&#160;
+	<b>2022</b>&#160;&#160;&#160;&#160;
+	<span style="float:right;">
+        <a class="imageLink" href="https://arxiv.org/abs/2104.05385" aria-hidden="true">
+	<img src="images/arxiv-logo.png" alt="arXiv link" width="40">
+    </a> &#160;&#160;&#160;&#160;
+	<a class="imageLink" href="https://link.springer.com/content/pdf/10.1007/s13398-022-01353-y.pdf">
+	<i class="pdflinking fa fa-file-pdf-o" style='font-size:20px;color:red' style="text-align: center;" aria-hidden="true"></i> 
+    </a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </span>
+	</p>
     
     
 
     <button class="accordion"><strong>Singularities of mappings on ICIS and applications to Whitney equisingularity</strong></button>
 <div class="panel">
-  <p>Abstract.</p>
+  <p>We study germs of analytic maps \(f:(X,S)\to(\mathcal{C}^p,0)\), when \(X\) is an ICIS of dimension \(n< p\).
+  We define an image Milnor number, generalizing Mond's definition, \(\mu_I(X,f)\) and give results known for the smooth case such as the conservation 
+  of this quantity by deformations. We also use this to characterise the Whitney equisingularity of families of corank one map germs
+  \(f_t\colon(\mathbb{C}^n,S)\to(\mathbb{C}^{n+1},0)\) with isolated instabilities in terms of the constancy of the \(\mu_I^*\)-sequences of \(f_t\)
+  and the projections \(\pi\colon D^2(f_t)\to\mathbb{C}^n\), where \(D^2(f_t)\) is the ICIS given by double point space of \(f_t\)
+  in \(\mathbb{C}^n\times\mathbb{C}^n\). The \(\mu_I^*\)-sequence of a map germ consist of the image Milnor number of the map germ and all 
+  its successive transverse slices.</p>
 </div>
-    <p style="text-align:center;">with J.J. Nuño-Ballesteros, <em>Adv. Math.</em>, <b>2022</b></p>
+    <p style="text-align:center;">with J.J. Nuño-Ballesteros,&#160;&#160;&#160;&#160;
+	<em>Adv. Math.</em>,&#160;&#160;&#160;&#160;
+	<b>2022</b>&#160;&#160;&#160;&#160;
+	<span style="float:right;">
+        <a class="imageLink" href="https://arxiv.org/pdf/2207.05196" aria-hidden="true">
+	<img src="images/arxiv-logo.png" alt="arXiv link" width="40">
+    </a> &#160;&#160;&#160;&#160;
+	<a class="imageLink" href="https://www.sciencedirect.com/science/article/pii/S0001870822004777/pdfft?md5=80afa44bb7c5b68feb232984f2ec369c&pid=1-s2.0-S0001870822004777-main.pdf">
+	<i class="pdflinking fa fa-file-pdf-o" style='font-size:20px;color:red' style="text-align: center;" aria-hidden="true"></i> 
+    </a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </span>
+	</p>
     
     
     
 
     <button class="accordion"><strong>The image Milnor number and excellent unfoldings</strong></button>
 <div class="panel">
-  <p>Abstract.</p>
+  <p>
+  We show three basic properties on the image Milnor number \(\mu_I(f)\) of a germ \(f\colon(\mathbb{C}^n,S)\rightarrow(\mathbb{C}^{n+1},0)\) with isolated
+  instability. First, we show the conservation of the image Milnor number, from which one can deduce the upper semi-continuity and the topological invariance
+  for families. Second, we prove the weak version of the Mond conjecture, which says that \(\mu_I(f)=0\) if and only if \(f\) is stable. 
+  Finally, we show a conjecture by Houston that any family \(f_t\colon(\mathbb{C}^n,S)\rightarrow(\mathbb{C}^{n+1},0)\) with \(\mu_I(f_t)\) constant
+  is excellent in Gaffney's sense. By technical reasons, in the two last properties we consider only the corank 1 case.  </p>
 </div>
-    <p style="text-align:center;">with J.J. Nuño-Ballesteros, <em>Q. J. Math.</em>, <b>2022</b></p>
+    <p style="text-align:center;">with J.J. Nuño-Ballesteros,&#160;&#160;&#160;&#160;
+	<em>Q. J. Math.</em>,&#160;&#160;&#160;&#160;
+	<b>2022</b>&#160;&#160;&#160;&#160;
+	<span style="float:right;">
+        <a class="imageLink" href="https://arxiv.org/abs/2003.10795" aria-hidden="true">
+	<img src="images/arxiv-logo.png" alt="arXiv link" width="40">
+    </a> &#160;&#160;&#160;&#160;
+	<a class="imageLink" href="https://doi.org/10.1093/qmath/haab019">
+	<i class="pdflinking fa fa-file-pdf-o" style='font-size:20px;color:red' style="text-align: center;" aria-hidden="true"></i> 
+    </a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </span>
+	</p>
 
     <!--<button class="accordion">Name</button>
 <div class="panel">
@@ -133,9 +222,22 @@
     
      <button class="accordion"><strong>Isotypes of ICIS and images of deformations of map germs</strong></button>
 <div class="panel">
-  <p>Abstract.</p>
+  <p>We give a simple way to study the isotypical components of the homology of simplicial complexes with actions
+  of finite groups, and use it for Milnor fibers of ICIS. We study the homology of images of mappings \(f_t\) that arise as deformations 
+  of complex map germs \(f:(\mathbb{C}^n,S)\to(\mathbb{C}^p,0)\), with \(n<p\), and the behaviour of singularities (instabilities) in this
+  context. We study two generalizations of the notion of image Milnor number \(\mu_I\) given by Mond and give a workable way of compute them,
+  in corank one, with Milnor numbers of ICIS. We also study two unexpected traits when \(p>n+1\): stable perturbations with contractible
+  image and homology of \(\text{im} f_t\) in unexpected dimensions. We show that Houston's conjecture, \(\mu_I\) constant in a family implies excellency
+  in Gaffney's sense, is false, but we give a proof for the cases where it holds.</p>
 </div>
-    <p style="text-align:center;"><em>Sent</em>, <b>2023</b></p>
+    <p style="text-align:center;"><em>Sent</em>,&#160;&#160;&#160;&#160;
+	<b>2023</b>&#160;&#160;&#160;&#160;
+	<span style="float:right;">
+        <a class="imageLink" href="https://arxiv.org/abs/2207.05196" aria-hidden="true">
+	<img src="images/arxiv-logo.png" alt="arXiv link" width="40">
+    </a> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+    </span>
+	</p>
     
     
     

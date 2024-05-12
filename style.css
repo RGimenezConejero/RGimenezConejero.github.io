@@ -13,14 +13,37 @@ body {
   margin: 0;
 }
 /* **************************** */
+	/* META */
+/* **************************** */
 
-/* This is to devine variables, use later var(--NAME) when you want to use it */
+/* This is to define variables, use later var(--NAME) when you want to use it */
 /* https://ado.xyz/blog/custom-css-color-names/#:~:text=To%20add%20a%20new%20named,%2D%2Dadoblue%3A%20%231a202c%3B%20%7D */
 :root {
   --colormain: #1a75ff; /* var(--colormain) */
   --colorhover: #ddd; /* var(--colorhover) */
+  --colorsecondary: #04AA6D /* var(--colorsecondary) */
 }
 
+
+::-moz-selection { /* Code for Firefox */
+  color: white; /* Letters color */
+  background:  var(--colormain); /* background color */
+}
+::selection {
+  color: white; /* Letters color */
+  background:  var(--colormain); /* background color */
+}
+
+a.imageLink{
+    text-decoration:none;
+}
+
+.pdflinking {
+  /* line-height: 9px; */
+  /* vertical-align: top; */
+  position:relative; 
+  bottom:2px; 
+}
 
 
 
@@ -84,7 +107,7 @@ body {
 }
 
 .topnav a.youarehere { /* DONT CHANGE NAME https://stackoverflow.com/questions/51818419/remove-a-wild-dash-from-active-class-anchor-tag */
-  background-color: #04AA6D;
+  background-color: var(--colorsecondary);
   color: white;
   border:none;
   text-decoration:none !important;
