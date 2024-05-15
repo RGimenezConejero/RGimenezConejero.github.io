@@ -139,7 +139,7 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
   .topnav{  /* the absence of a affects the entire object */
 	position:static !important;
   }
@@ -208,7 +208,7 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
   .dropdown {
 	float: none;
     width:100%;
@@ -266,7 +266,7 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 350px) {
   .dropdown {
 	float: none;
     width:100%;
