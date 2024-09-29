@@ -19,9 +19,9 @@ body {
 /* This is to define variables, use later var(--NAME) when you want to use it */
 /* https://ado.xyz/blog/custom-css-color-names/#:~:text=To%20add%20a%20new%20named,%2D%2Dadoblue%3A%20%231a202c%3B%20%7D */
 :root {
-  --colormain: #1a75ff; /* var(--colormain) */
-  --colorhover: #ddd; /* var(--colorhover) */
-  --colorsecondary: #04AA6D /* var(--colorsecondary) */
+  --colormain: #1a75ff; /* var(--colormain) BLUE */
+  --colorhover: #ddd; /* var(--colorhover) GRAY */
+  --colorsecondary: #04AA6D /* var(--colorsecondary) GREEN */
 }
 
 
@@ -139,7 +139,7 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .topnav{  /* the absence of a affects the entire object */
 	position:static !important;
   }
@@ -208,7 +208,7 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .dropdown {
 	float: none;
     width:100%;
@@ -266,7 +266,7 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .dropdown {
 	float: none;
     width:100%;
@@ -294,14 +294,14 @@ a.imageLink{
 .side {
   flex: 25%; /* Portion of side, compatible with (w.w) */
   background-color: #f1f1f1;
-  padding: 20px; /* Margin */
+  padding: 15px; /* Margin */
 }
 
 /* Main column */
 .main {   
   flex: 75%; /* Portion of main, compatible with (w.w) */
   background-color: white;
-  padding: 20px; /* Margin */
+  padding: 15px; /* Margin */
 }
 
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -313,9 +313,13 @@ a.imageLink{
   }
   .side {
   flex: 100%;
+  padding:20px 15px; /* This is a weird fix to the bug that hides this behing the right link in the topnav */
+  /*position:absolute;*/
   }
   .main {
   flex: 100%;
+  padding:20px 15px; /* This is a weird fix to the bug that hides this behing the right link in the topnav */
+  /*position:absolute;*/
   }
 }
 
@@ -379,11 +383,43 @@ a.imageLink{
   transition: max-height 0.2s ease-out; /* Effects on transition */
 }
 
-
+/* Responsive layout - when the screen is less than 700px wide, add margin */
+@media screen and (max-width: 700px) {
+  .mainBIG {
+  padding:40px 20px; /* This is to compensate a weird fix to the bug in topnav */
+  }
+}
 
 /* **************************** */
 
+/* **************************** */
+  /* Hyperlinks */
+/* **************************** */
 
+a:link {
+  color: var(--colormain);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/*a:visited {
+  color: #E85232;
+  background-color: transparent;
+  text-decoration: none;
+}*/
+
+/*a:hover {
+  color: #C34429;
+  background-color: transparent;
+  text-decoration: underline;
+}*/
+
+a:active {
+  color: var(--colorsecondary);
+  background-color: transparent;
+  text-decoration: none;
+
+/* **************************** */
 
 /* Fake image, just for this example */
 .fakeimg {
