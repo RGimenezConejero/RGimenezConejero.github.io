@@ -396,11 +396,11 @@ a.imageLink{
   /* Hyperlinks */
 /* **************************** */
 
-a:link {
+/*a:link {
   color: var(--colormain);
   background-color: transparent;
   text-decoration: none;
-}
+}*/
 
 /*a:visited {
   color: #E85232;
@@ -414,11 +414,11 @@ a:link {
   text-decoration: underline;
 }*/
 
-a:active {
+/*a:active {
   color: var(--colorsecondary);
   background-color: transparent;
   text-decoration: none;
-
+}*/
 /* **************************** */
 
 /* Fake image, just for this example */
