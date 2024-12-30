@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt]{amsart}
+
+\usepackage{amsmath,amsthm,amsfonts,amssymb,mathtools,mathrsfs,bm}%Several symbols
+
+\usepackage[utf8]{inputenc}%Text format: Input encoding
+\usepackage[T1]{fontenc}%Text format: Font encoding (accents and umlauts...)
+\usepackage{lmodern}%Text format: Better quality characters
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}% To link references. COMPILE IN PDF!!! 
+\usepackage[capitalize,nameinlink,noabbrev]{cleveref}% to emulate \autoref style  
+
+
+
+%IF YOU HAVE TO ADD ANOTHER PACKAGE DO IT HERE:
+
+
+
+
+
+% STYLE GUIDELINES:
+
+% Try to use as simple LaTeX code as possible, avoid macros
+
+% Use \cref instead of \ref
+% Example: 
+% 'It is easy to see that \cref{prob:topolo} and \cref{prob:alg} are equivalent'
+% instead of
+% 'It is easy to see that Problem \ref{prob:topolo} and Problem \ref{prob:alg} are equivalent'
+
+% References: 
+% Include the necessary references you would recommend a PhD student to study the problem(s).
+% Add them in the way you please.
+
+% Try to have more problems than pages in your contribution (without references), but add as many problems as you want in the same or different contributions.
+
+% Images are welcomed as well.
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+
+\begin{document}
+\author{R. Giménez Conejero}
+\title{Algebra-computing spectral sequences}
+\email{roberto.gimenez@uam.es}
+\keywords{Singularities of maps, Thom-Mather theory, codimension, spectral sequence, computation}
+
+
+\maketitle
+
+
+In the theory of singularities of maps, also called \textsl{Thom-Mather theory}, one of the commonly studied topics is the topology of the discriminants of maps and how they change after small perturbations. In close connection with this, the algebraic properties of the singularities and their deformations are often expressed in terms of certain \textsl{codimensions}, \textsl{versal unfoldings}, \textsl{bifurcations sets}, etc. Some modern references for this are \cite{Mond2020} and \cite[Chapter 2]{HB3}.
+
+In the case that the dimension of the target space of a map germ, say $p$, is lower than the dimension of the source, say $n$, the discriminant coincides with the image. There is a tool to compute the homology of the image of a map that works in great generality, called the \textit{Image-Computing Spectral Sequence} (ICSS). However, there is no such tool to help us to compute the algebra of the singularity of a map, something similar to an \textsl{Algebra-Computing Spectral Sequence} (ACSS).
+
+The ICSS of a map $f:N\rightarrow P$ uses the \textsl{homological properties} of the multiple point spaces of $f$ $D^k(f)$ to compute (to some extent) the homology of $f(N)$ and, for this reason, one hopes that there is an ACSS that uses the \textsl{algebraic information} of the multiple point spaces to compute the algebraic invariants we want. More precisely:
+
+\begin{problem}\label{prob:ACSS}
+Find a spectral sequence that, for any map germ $f:(\mathbb{C}^n,0)\rightarrow(\mathbb{C}^p,0)$, computes the $\mathscr{A}_e$-codimension of $f$ using algebraic information of the multiple point spaces $D^k(f)$.
+\end{problem}
+
+The case of \cref{prob:ACSS} for corank one map germs should be simpler, since the multiple point spaces are isolated complete intersection singularities when the germ has finite $\mathscr{A}_e$-codimension. See \cite[Proposition 2.14]{Marar1989}
+
+\begin{problem}
+For corank one map germs $f:(\mathbb{C}^n,0)\rightarrow(\mathbb{C}^p,0)$, there is a spectral sequence that uses the Tjurina modules of the multiple point spaces $D^k(f)$ and computes the $\mathscr{A}_e$-codimension of $f$.
+\end{problem}
+
+Some recommended references for the ICSS are \cite{Goryunov1993,Houston2007,CisnerosMolina2022} and \cite[Chapter 2]{Robertothesis}. This problem was first stated in the Remark 7.7 of the related work \cite{GimenezConejero2022c}.
+
+% You can use whatever you want for the references. Send us necessary files.
+\bibliography{templatebib}
+\bibliographystyle{plain}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+

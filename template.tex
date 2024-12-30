@@ -1,0 +1,110 @@
+\documentclass[a4paper,11pt]{amsart}
+
+\usepackage{amsmath,amsthm,amsfonts,amssymb,mathtools,mathrsfs,bm}%Several symbols
+
+\usepackage[utf8]{inputenc}%Text format: Input encoding
+\usepackage[T1]{fontenc}%Text format: Font encoding (accents and umlauts...)
+\usepackage{lmodern}%Text format: Better quality characters
+
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}% To link references. COMPILE IN PDF!!! 
+\usepackage[capitalize,nameinlink,noabbrev]{cleveref}% to emulate \autoref style  
+
+
+
+%IF YOU HAVE TO ADD ANOTHER PACKAGE DO IT HERE:
+
+
+
+
+
+% STYLE GUIDELINES:
+
+% Try to use as simple LaTeX code as possible, avoid macros
+
+% Use \cref instead of \ref
+% Example: 
+% 'It is easy to see that \cref{prob:topolo} and \cref{prob:alg} are equivalent'
+% instead of
+% 'It is easy to see that Problem \ref{prob:topolo} and Problem \ref{prob:alg} are equivalent'
+
+% References: 
+% Include the necessary references you would recommend a PhD student to study the problem(s).
+% Add them in the way you please.
+
+% Try to have more problems than pages in your contribution (without references), but add as many problems as you want in the same or different contributions.
+
+% Images are welcomed as well.
+
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+
+\begin{document}
+\author{Author Name}
+\title{Title title title title}
+\email{email}
+\keywords{Word 1, word 2, word 3}
+
+
+\maketitle
+
+
+Small explanation and/or motivation of the problem(s), if possible. \textcolor[rgb]{0.4,0.4,0.4}{Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa.} 
+
+\textcolor[rgb]{0.4,0.4,0.4}{Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa.} 
+
+\begin{problem}\label{prob:name}
+This is a problem.
+\end{problem}
+
+Small explanation and/or motivation of the problem(s), if possible. \textcolor[rgb]{0.4,0.4,0.4}{Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. }
+
+Example of the use of cref is \cref{prob:name}, and it does not need to write the word \textsl{problem}.
+
+\begin{problem}[Name of the problem in the folklore, if any]
+This is another problem.
+\end{problem}
+
+
+References you would recommend a PhD student to study the problem(s), can be placed along the text, at the beginning or at the end. If your reference is specific, make it clear by stating the result, section, chapter or page you mean.\textcolor[rgb]{0.4,0.4,0.4}{Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. Aaaa aaa aaaaaaa aaa aaaaaa aa a aaa aaa aa. }
+
+% You can use whatever you want for the references. Send us necessary files.
+%\bibliography{FileNameBib}
+% \bibliographystyle{plain}
+
+% You can use whatever you want for the references. Send us necessary files.
+%\begin{thebibliography}{1}
+%\bibitem{Mi} J.W. Milnor, {\it Singular points of complex hypersurfaces}, Ann. of Math. Studies 61, Princeton, 1968.
+%\end{thebibliography}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
