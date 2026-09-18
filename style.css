@@ -80,13 +80,36 @@ a.imageLink{
   text-align: center;
 }
 
-.publication-meta > span[style*="float:right"] {
+.publication-meta > .publication-actions {
   position: absolute;
-  right: 0;
+  right: 3rem;
   top: 50%;
   display: flex;
   align-items: center;
+  gap: 3.25rem;
   transform: translateY(-50%);
+}
+
+.publication-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.publication-meta--single-line {
+  padding-left: 0;
+  padding-right: 112px;
+  font-size: clamp(0.8rem, 1.25vw, 1rem);
+}
+
+.publication-meta--single-line .publication-details {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.publication-year {
+  white-space: nowrap;
 }
 
 .ivooxlinking {
@@ -748,6 +771,25 @@ a.imageLink{
   overflow: auto;
 }
 
+/* Put publication actions below the citation before they can collide. */
+@media screen and (max-width: 1050px) {
+  .publication-meta {
+    display: block;
+    padding: 0;
+    text-align: center !important;
+  }
+
+  .publication-meta > .publication-actions {
+    position: static;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    transform: none;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .header {
     padding: 24px 16px;
@@ -767,7 +809,19 @@ a.imageLink{
     padding: 0;
     text-align: center !important;
   }
-  .mainBIG > p > span[style*="float:right"] {
+  .publication-details {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+  .publication-meta--single-line {
+    padding: 0;
+    font-size: 1rem;
+  }
+  .publication-meta--single-line .publication-details {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+  .mainBIG > p > .publication-actions {
     float: none !important;
     position: static;
     display: flex;
