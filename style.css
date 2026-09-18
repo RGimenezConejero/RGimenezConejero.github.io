@@ -11,6 +11,13 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  color: #202124;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+img, video, iframe, mjx-container {
+  max-width: 100%;
 }
 /* **************************** */
 	/* META */
@@ -39,10 +46,47 @@ a.imageLink{
 }
 
 .pdflinking {
-  /* line-height: 9px; */
-  /* vertical-align: top; */
-  position:relative; 
-  bottom:2px; 
+  position: static;
+  display: block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Give publication icons the same box and optical alignment. */
+.mainBIG .imageLink {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.mainBIG .imageLink img {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+
+.publication-meta {
+  position: relative;
+  display: flex;
+  min-height: 40px;
+  margin-top: 4px;
+  margin-bottom: 22px;
+  padding: 0 150px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.publication-meta > span[style*="float:right"] {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
 }
 
 .ivooxlinking {
@@ -60,7 +104,7 @@ a.imageLink{
 
   /* Style the header */
 .header {
-  padding: 70px;
+  padding: 40px 20px;
   text-align: center;
   background: var(--colormain); /* Color background */
   color: white; /* Color text */
@@ -69,11 +113,16 @@ a.imageLink{
 /* Increase the font size of the h1 element */
 .header h1 {
   font-size: 40px;
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
 }
 /* Responsive layout */
 @media screen and (max-width: 450px) {
   .header {
-  padding: 35px;
+  padding: 24px 16px;
   }
 }
 /* **************************** */
@@ -113,6 +162,9 @@ a.imageLink{
       position: sticky;
       top: 0;
       min-height: 46px;
+      display: flex;
+      align-items: stretch;
+      z-index: 1000;
     }
 	
 	.topnav2 {
@@ -121,6 +173,9 @@ a.imageLink{
       position: sticky;
       top: 0;
       min-height: 46px;
+      display: flex;
+      align-items: stretch;
+      z-index: 1000;
     }
 
   /* Style the navigation bar links */
@@ -133,6 +188,7 @@ a.imageLink{
       padding: 14px 16px; /* The margins of each element of the nav bar (vertical horizontal) */
       text-decoration: none;
       font-size: 16px;
+      line-height: 18px;
  }
   .topnav2 a {
       list-style-type: none;
@@ -143,6 +199,7 @@ a.imageLink{
       padding: 14px 16px; /* The margins of each element of the nav bar (vertical horizontal) */
       text-decoration: none;
       font-size: 16px;
+      line-height: 18px;
  }
   
     /* Change color on hover */
@@ -182,7 +239,8 @@ a.imageLink{
 
  /* Right-aligned link */
 .topnav a.right {
-  float: right;
+  float: none;
+  margin-left: auto;
   background-color: #E85232; /* Color background */
   color: white; /* Color text */
 }
@@ -191,7 +249,8 @@ a.imageLink{
   color: white; /*Color text hovering, accpets html colors*/
 }
 .topnav2 a.right {
-  float: right;
+  float: none;
+  margin-left: auto;
   background-color: var(--colormain); /* Color background */
   color: white; /* Color text */
 }
@@ -202,9 +261,11 @@ a.imageLink{
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 760px) {
   .topnav{  /* the absence of a affects the entire object */
 	position:static !important;
+    display: flex;
+    flex-direction: column;
   }
   .topnav  a{ /* a affects the elements */
     float: none;
@@ -212,7 +273,8 @@ a.imageLink{
 	padding: 10px; /* The margins of each element of the nav bar (vertical horizontal) */
   }
   .topnav  a.right{
-	  float=none;
+	  float: none;
+	  margin-left: 0;
 	  width:100%;
 	  list-style-type: none;
       display: block;  /* Style of the full bar */
@@ -220,12 +282,14 @@ a.imageLink{
       text-align: center;
       text-decoration: none;
       font-size: 16px;
-	  position:absolute !important; 
+	  position: static !important; 
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 760px) {
   .topnav2{  /* the absence of a affects the entire object */
 	position:static !important;
+    display: flex;
+    flex-direction: column;
   }
   .topnav2  a{ /* a affects the elements */
     float: none;
@@ -233,7 +297,8 @@ a.imageLink{
 	padding: 10px; /* The margins of each element of the nav bar (vertical horizontal) */
   }
   .topnav2  a.right{
-	  float=none;
+	  float: none;
+	  margin-left: 0;
 	  width:100%;
 	  list-style-type: none;
       display: block;  /* Style of the full bar */
@@ -241,7 +306,7 @@ a.imageLink{
       text-align: center;
       text-decoration: none;
       font-size: 16px;
-	  position:absolute !important; 
+	  position: static !important; 
   }
 }
 
@@ -250,9 +315,16 @@ a.imageLink{
   /* The dropdown container */
 .dropdown {
   float: left;
+  display: flex;
+  align-items: stretch;
 }
   /* Dropdown button */
 .dropdown .dropbtn {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 5px;
+  line-height: 18px;
   font-size: 16px;
   border: none;
   outline: none;
@@ -285,14 +357,14 @@ a.imageLink{
   background-color: #ddd;
   color: black;
 }
-  /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+  /* The menu is opened explicitly by nav.js. */
+.dropdown.is-open .dropdown-content {
   display: block;
 }
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 760px) {
   .dropdown {
 	float: none;
     width:100%;
@@ -308,9 +380,16 @@ a.imageLink{
  /* The dropdown container BUT SELECTED */
 .dropdownHERE {
   float: left;
+  display: flex;
+  align-items: stretch;
 }
   /* Dropdown button */
 .dropdownHERE .dropbtnHERE {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 5px;
+  line-height: 18px;
   font-size: 16px;
   border: none;
   outline: none;
@@ -343,21 +422,27 @@ a.imageLink{
   background-color: #ddd;
   color: black;
 }
-  /* Show the dropdown menu on hover */
-.dropdownHERE:hover .dropdownHERE-content {
+  /* The menu is opened explicitly by nav.js. */
+.dropdownHERE.is-open .dropdownHERE-content {
   display: block;
 }
 
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
-  .dropdown {
+@media screen and (max-width: 760px) {
+  .dropdown, .dropdownHERE {
 	float: none;
     width:100%;
   }
-  .dropbtn {
+  .dropbtn, .dropbtnHERE {
 	float: none;
     width:100%;
+    justify-content: center;
+  }
+  .dropdown-content, .dropdownHERE-content {
+    position: static;
+    width: 100%;
+    box-shadow: none;
   }
 }
 
@@ -376,22 +461,24 @@ a.imageLink{
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 25%; /* Portion of side, compatible with (w.w) */
+  flex: 1 1 280px; /* Portion of side, compatible with (w.w) */
+  min-width: 0;
   background-color: #f1f1f1;
   padding: 15px; /* Margin */
 }
 
 /* Main column */
 .main {   
-  flex: 75%; /* Portion of main, compatible with (w.w) */
+  flex: 3 1 520px; /* Portion of main, compatible with (w.w) */
+  min-width: 0;
   background-color: white;
   padding: 15px; /* Margin */
 }
 
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 760px) {
   .row {
-  padding:40px 0px; /* This is a weird fix to the bug that hides this behing the right link in the topnav */
+  padding:0; 
   /*position:absolute;*/
   flex-direction: column;
   }
@@ -419,6 +506,186 @@ a.imageLink{
   flex: 100%; 
   background-color: white;
   padding: 20px; /* Margin */
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-status {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin: 20px 0 28px;
+  padding: 20px 22px;
+  color: #49380b;
+  background: linear-gradient(135deg, #fffaf0, #fff4cf);
+  border: 1px solid #e4c56d;
+  border-left: 5px solid #b8860b;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(73, 56, 11, 0.08);
+}
+
+.project-status-icon {
+  display: flex;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #b8860b;
+  border-radius: 50%;
+}
+
+.project-status h2 {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+}
+
+.project-status p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.page-updated {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.interests-intro {
+  max-width: 980px;
+  margin: 8px auto 34px;
+  padding: 0 0 18px;
+  color: #3c4657;
+  border-bottom: 2px solid #172033;
+}
+
+.interests-intro p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.interest-collection {
+  max-width: 980px;
+  margin: 0 auto;
+  counter-reset: interesting-topic;
+}
+
+.interest-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 20px;
+  margin: 0;
+  padding: 28px 56px 30px 0;
+  border-top: 1px solid #dce4f0;
+  counter-increment: interesting-topic;
+}
+
+.interest-card::before {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  content: counter(interesting-topic, decimal-leading-zero);
+  color: #a9b3c2;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.interest-card:last-child {
+  border-bottom: 1px solid #dce4f0;
+}
+
+.interest-card-sound { --card-accent: #087f8c; }
+.interest-card-unruh { --card-accent: #7b2cbf; }
+.interest-card-language { --card-accent: #b45309; }
+
+.interest-icon {
+  display: flex;
+  position: static;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: var(--card-accent);
+  border-radius: 10px;
+  font-size: 1.05rem;
+}
+
+.interest-label {
+  margin: 0 0 3px;
+  color: var(--card-accent);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.interest-card h2 {
+  margin: 0 0 10px;
+  color: #172033;
+  font-size: 1.45rem;
+}
+
+.interest-card > div > p:not(.interest-label) {
+  margin: 0;
+}
+
+.interest-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.interest-links a {
+  position: relative;
+  z-index: 1;
+  padding: 7px 10px;
+  color: var(--card-accent);
+  background: color-mix(in srgb, var(--card-accent) 8%, white);
+  border: 1px solid color-mix(in srgb, var(--card-accent) 25%, white);
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.interest-links a:hover,
+.interest-links a:focus-visible {
+  color: white;
+  background: var(--card-accent);
+}
+
+.interest-references {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  font-size: 0.88rem;
+  list-style: none;
+}
+
+.interest-references li + li {
+  margin-top: 0;
+}
+
+.interest-references a {
+  display: block;
+  padding: 9px 11px;
+  color: #31435f;
+  background: #f8fafc;
+  border: 1px solid #dce4f0;
+  border-radius: 7px;
+  text-decoration: none;
+}
+
+.interest-references a:hover,
+.interest-references a:focus-visible {
+  color: var(--card-accent);
+  border-color: var(--card-accent);
+  background: white;
 }
 
   /* Style the buttons that are used to open and close the accordion panel */
@@ -436,6 +703,7 @@ a.imageLink{
   border-radius: 8px; /* Round borders */
   border-left: 4px solid #1a75ff; /* Size Style Color */
   border-right: 4px solid #1a75ff; /* Size Style Color */
+  line-height: 1.4;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -470,7 +738,67 @@ a.imageLink{
 /* Responsive layout - when the screen is less than 700px wide, add margin */
 @media screen and (max-width: 700px) {
   .mainBIG {
-  padding:40px 20px; /* This is to compensate a weird fix to the bug in topnav */
+  padding:24px 15px;
+  }
+}
+
+/* Keep publication metadata and action icons readable on narrow screens. */
+.mainBIG > p {
+  min-height: 40px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    padding: 24px 16px;
+  }
+  .header h1 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    margin: 0 0 0.5rem;
+  }
+  .header2 {
+    padding: 18px;
+  }
+  .mainBIG > p {
+    text-align: left !important;
+  }
+  .publication-meta {
+    display: block;
+    padding: 0;
+    text-align: center !important;
+  }
+  .mainBIG > p > span[style*="float:right"] {
+    float: none !important;
+    position: static;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+    transform: none;
+  }
+  .accordion {
+    padding: 16px 12px;
+  }
+  .panel {
+    padding: 0 12px;
+  }
+  .project-status {
+    gap: 12px;
+    padding: 16px;
+  }
+  .interest-collection {
+    margin-left: 0;
+  }
+  .interest-card {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    padding: 22px 36px 24px 0;
+  }
+  .interest-icon {
+    width: 38px;
+    height: 38px;
   }
 }
 
