@@ -533,6 +533,69 @@ a.imageLink{
   overflow-wrap: anywhere;
 }
 
+/* Teaching materials: a quiet course entry with the publication PDF icon. */
+.teaching-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.teaching-intro {
+  margin-bottom: 28px;
+}
+
+.teaching-intro h2 {
+  margin: 0 0 8px;
+}
+
+.teaching-intro p {
+  margin: 0;
+  color: #555;
+}
+
+.teaching-resource {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid #e0e3e7;
+  border-bottom: 1px solid #e0e3e7;
+}
+
+.teaching-resource-details {
+  min-width: 0;
+}
+
+.teaching-resource h3 {
+  margin: 0 0 4px;
+  font-size: 1.2rem;
+}
+
+.teaching-course {
+  margin: 0;
+  color: #555;
+}
+
+.teaching-resource > .imageLink {
+  flex-shrink: 0;
+}
+
+.teaching-resource > .imageLink:focus-visible {
+  outline: 2px solid #245a91;
+  outline-offset: 4px;
+}
+
+@media screen and (max-width: 700px) {
+  .teaching-resource {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 0;
+  }
+}
+
 .project-status {
   display: flex;
   gap: 18px;
@@ -619,9 +682,9 @@ a.imageLink{
   border-bottom: 1px solid #dce4f0;
 }
 
-.interest-card-sound { --card-accent: #087f8c; }
-.interest-card-unruh { --card-accent: #7b2cbf; }
+.interest-card-physics { --card-accent: #087f8c; }
 .interest-card-language { --card-accent: #b45309; }
+.interest-card-maps { --card-accent: #2563a6; }
 
 .interest-icon {
   display: flex;
